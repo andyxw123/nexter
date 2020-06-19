@@ -15,7 +15,14 @@
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-auto-rows: minmax(1rem, 1fr);
-  align-items: center;
+  //align-items: center;
+
+  &__item {
+    background-color: $color-secondary-light;
+    transition: all .2s;
+    display: grid;
+    align-content: space-around;
+  }
 
   &__link:link,
   &__link:visited {
@@ -29,9 +36,10 @@
     padding: 1.5rem;
     transition: all 0.2s;
 
-    background-color: rgba($color-white, 0.05);
+    background-color: $color-secondary-light;
   }
 
+  &__item:hover,
   &__link:hover,
   &__link:active {
     background-color: $color-grey-dark-1;
