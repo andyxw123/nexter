@@ -45,9 +45,9 @@
     border: none;
     transition: all .3s;
 
-    // &:focus {
-    //     outline: none;
-    // }
+    &:focus {
+        outline: none;
+    }
 
     &:hover {
         background-color: $color-primary-dark;

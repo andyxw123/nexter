@@ -3,6 +3,10 @@
 
     grid-column: col-start 7 / full-end;
 
+    @media only screen and (max-width: $bp-md) {
+        grid-column: 1 / -1;
+      }
+
     display: grid;
     align-content: center;
     justify-content: center;
@@ -19,6 +23,17 @@
         align-items: center;
         justify-content: center;
         align-content: center;
+
+        @media only screen and (max-width: $bp-md) {
+            grid-auto-flow: column;
+
+            // OR can repeat the 2 column tracks 3 times to make 6 columns
+            //grid-template-columns: repeat(3, min-content max-content);
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            grid-auto-flow: row;
+        }
     }
 
     &__img {
